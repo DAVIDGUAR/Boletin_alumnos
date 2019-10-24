@@ -16,15 +16,10 @@ public class Ejercicio_Alumnos_datos {
      */
     public static void main(String[] args) {
        
-        Alumnos alumno1 = new Alumnos("daVID","SFD","SDGF","DSG");
+        Alumnos alumno1 = new Alumnos("david","DAM",new Direccion("JGKDF","HFLKSD"));
         
-        alumno1.getCurso();
-      alumno1.setCurso("jgsdKJF");
-        
-        System.out.println("" +  alumno1.getCurso());
-        
-        
-        System.out.println(""+alumno1.toString());
+        System.out.println(alumno1.toString());
+     
         
         
     }

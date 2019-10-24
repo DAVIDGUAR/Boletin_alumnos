@@ -20,6 +20,13 @@ class Direccion {
         
     }
 
+    public Direccion() {
+    }
+    
+    
+    
+    
+
     public String getEmail() {
         return email;
     }
@@ -40,7 +47,8 @@ class Direccion {
     public String toString() {
         return "Direccion{" + "email=" + email + ", telf=" + telf + '}';
     }
-    
+
+   
     
     
 }

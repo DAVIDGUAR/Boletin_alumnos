@@ -12,21 +12,27 @@ package ejercicio_alumnos_datos;
 public class Alumnos {
     
   private  String nombre,curso;
-   
+   private Direccion direccion = new Direccion();
 
-    public Alumnos(String nombre, String curso,String email,String telf ) {
+    public Alumnos(String nombre, String curso,Direccion dato ) {
         this.nombre = nombre;
         this.curso = curso;
-      Direccion datos = new Direccion(email, telf);
+      this.direccion=dato;
        
        
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
 
  
 
-    public Alumnos() {
-    }
-    
+  
     
     
 
@@ -46,10 +52,18 @@ public class Alumnos {
         this.curso = curso;
     }
 
+   /* @Override
+    public String toString() {
+        return "Alumnos{" + "nombre= " + nombre + ", curso= " + curso + ", direccion electronica= " + direccion.getEmail() +", telefono= "+ direccion.getTelf()+ '}';
+    }*/
+
     @Override
     public String toString() {
-        return "Alumnos{" + "nombre=" + nombre + ", curso=" + curso + '}';
+        return "Alumnos{" + "nombre=" + nombre + ", curso=" + curso + ", direccion=" + direccion.toString() + '}';
     }
+
+
+
 
   
     }
