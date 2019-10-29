@@ -5,6 +5,8 @@
  */
 package ejercicio_alumnos_datos;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author david
@@ -16,12 +18,17 @@ public class Ejercicio_Alumnos_datos {
      */
     public static void main(String[] args) {
        
-        Alumnos alumno1 = new Alumnos("david","DAM",new Direccion("JGKDF","HFLKSD"));
-        
-        System.out.println(alumno1.toString());
-     
-        
-        
+       //Alumnos alumno2 = new Alumnos("david","asir",new Direccion("", ""));
+        Alumnos alumno1 = new Alumnos(JOptionPane.showInputDialog("Introduce nombre empleado"),(JOptionPane.showInputDialog("Introduce nombre curso")),new Direccion());
+       // Direccion dir1 = new Direccion("VFV","FG0001FD");
+     System.out.println(alumno1.toString());
+       //System.out.println(alumno2.toString());
+       // Alumnos alumno2 = new Alumnos("ANTONIO", "ASIR", new Direccion());
+      //  alumno1.setDireccion(new Direccion("dgfag","654321987"));
+       // System.out.println(alumno1.toString());
+       // alumno1.setDireccion(dir1);
+       // System.out.println(alumno1.toString());
+       // System.out.println(alumno1.getDireccion());
     }
     
     

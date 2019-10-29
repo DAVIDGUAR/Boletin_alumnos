@@ -5,22 +5,29 @@
  */
 package ejercicio_alumnos_datos;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author david
  */
 public class Alumnos {
-    
-  private  String nombre,curso;
-   private Direccion direccion = new Direccion();
 
-    public Alumnos(String nombre, String curso,Direccion dato ) {
+    private String nombre, curso;
+    private Direccion direccion = new Direccion();
+
+    public Alumnos(String nombre, String curso, Direccion dato) {
         this.nombre = nombre;
         this.curso = curso;
-      this.direccion=dato;
-       
-       
+        this.direccion = dato;
+
     }
+
+    public Alumnos() {
+    }
+    
+    
+    
 
     public Direccion getDireccion() {
         return direccion;
@@ -28,13 +35,8 @@ public class Alumnos {
 
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
+
     }
-
- 
-
-  
-    
-    
 
     public String getNombre() {
         return nombre;
@@ -52,27 +54,13 @@ public class Alumnos {
         this.curso = curso;
     }
 
-   /* @Override
-    public String toString() {
-        return "Alumnos{" + "nombre= " + nombre + ", curso= " + curso + ", direccion electronica= " + direccion.getEmail() +", telefono= "+ direccion.getTelf()+ '}';
-    }*/
-
+    /* @Override
+     public String toString() {
+     return "Alumnos{" + "nombre= " + nombre + ", curso= " + curso + ", direccion electronica= " + direccion.getEmail() +", telefono= "+ direccion.getTelf()+ '}';
+     }*/
     @Override
     public String toString() {
         return "Alumnos{" + "nombre=" + nombre + ", curso=" + curso + ", direccion=" + direccion.toString() + '}';
     }
 
-
-
-
-  
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-
+}
