@@ -17,6 +17,10 @@ class Direccion {
 
     public Direccion(String email, String telf) {
 
+        this.email = email;
+        this.telf = telf;
+
+        /*                               //dentro del constructor no se puede construir otra cosa que no sea las variables del objeto a construir.
         boolean punto = false;
         int arroba = 0;
         boolean a = false;
@@ -73,13 +77,13 @@ class Direccion {
 
             }
 
-        }
+        }*/
     }
 
     public Direccion() {
 
-        email = JOptionPane.showInputDialog("Introduce correo electronico");
-        telf = JOptionPane.showInputDialog("Introduce telefono");
+        //  email = JOptionPane.showInputDialog("Introduce correo electronico");
+        //  telf = JOptionPane.showInputDialog("Introduce telefono");
     }
 
     public String getEmail() {
@@ -87,8 +91,43 @@ class Direccion {
     }
 
     public void setEmail(String email) {
+        boolean punto = false;
+        int arroba = 0;
+        boolean a = false;
+       
 
-        this.email = email;
+        while (a == false) {
+
+            for (int i = 0; i < email.length(); i++) {
+
+                if (email.charAt(i) == '@') {
+
+                    arroba++;
+
+                }
+
+                if (email.charAt(i) == '.') {
+
+                    punto = true;
+
+                }
+            }
+
+            if (arroba == 1 && punto == true) {
+
+                System.out.println("Correcto");
+
+                a = true;
+
+                this.email = email;
+
+            } else {
+                System.out.println("Correo electronico incorrecto");
+            }
+
+            arroba = 0;
+            punto = false;
+        }
 
     }
 
@@ -97,9 +136,76 @@ class Direccion {
     }
 
     public void setTelf(String telf) {
+         boolean b = false;
 
-        this.telf = telf;
+       while (b == false) {
 
+            telf = JOptionPane.showInputDialog("Introduce telefono");
+            if (telf.length() == 9) {
+                System.out.println("Correcto ");
+                b = true;
+                this.telf = telf;
+
+            } else {
+                System.out.println("El telefono introducido es incorrecto");
+            }
+
+
+    }
+    }
+
+    public void comprobardireccion() {
+        boolean punto = false;
+        int arroba = 0;
+        boolean a = false;
+        boolean b = false;
+
+        while (a == false) {
+
+            email = JOptionPane.showInputDialog("Introduce correo electronico");
+            for (int i = 0; i < email.length(); i++) {
+
+                if (email.charAt(i) == '@') {
+
+                    arroba++;
+
+                }
+
+                if (email.charAt(i) == '.') {
+
+                    punto = true;
+
+                }
+            }
+
+            if (arroba == 1 && punto == true) {
+
+                System.out.println("Correcto");
+
+                a = true;
+
+                this.email = email;
+
+            } else {
+                System.out.println("Correo electronico incorrecto");
+            }
+
+            arroba = 0;
+            punto = false;
+        }
+        while (b == false) {
+
+            telf = JOptionPane.showInputDialog("Introduce telefono");
+            if (telf.length() == 9) {
+                System.out.println("Correcto ");
+                b = true;
+                this.telf = telf;
+
+            } else {
+                System.out.println("El telefono introducido es incorrecto");
+            }
+
+        }
     }
 
     @Override
@@ -108,58 +214,3 @@ class Direccion {
     }
 
 }
-
-/*  
- boolean punto = false;
- int arroba = 0;
- boolean a = false;
- // boolean b = false;
-        
-        
- while (a == false) {
-
- // email = JOptionPane.showInputDialog("Introduce correo electronico");
-
- for (int i = 0; i < email.length(); i++) {
-
- if (email.charAt(i) == '@') {
-
- arroba++;
-
- }
-
- if (email.charAt(i) == '.') {
-
- punto = true;
-
- }
- }
-
- if (arroba == 1 && punto == true) {
-
- System.out.println("Correcto");
-
-               
-
- a = true;
-
- } else {
- System.out.println("Correo electronico incorrecto");
- }
-
- arroba = 0;
- punto = false;
- }
- //  while (b == false) {
-
- // telf = JOptionPane.showInputDialog("Introduce telefono");
-
- if (telf.length() == 9) {
-
-                
- //  b = true;
- } else {
- System.out.println("El telefono introducido es incorrecto");
- }
-
- //  }*/
