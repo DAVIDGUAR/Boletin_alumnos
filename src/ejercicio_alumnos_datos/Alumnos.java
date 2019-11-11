@@ -29,14 +29,14 @@ public class Alumnos {
     
     
 
-    public Direccion getDireccion() {
+   /* public Direccion getDireccion() {
         return direccion;
-    }
+    }*/
 
-    public void setDireccion(Direccion direccion) {
+ /*   public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
 
-    }
+    }*/
 
     public String getNombre() {
         return nombre;

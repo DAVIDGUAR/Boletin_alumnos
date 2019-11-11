@@ -135,7 +135,7 @@ class Direccion {
         return telf;
     }
 
-    public void setTelf(String telf) {
+    public void setTelf(String telfono) {
          boolean b = false;
 
        while (b == false) {
@@ -144,7 +144,7 @@ class Direccion {
             if (telf.length() == 9) {
                 System.out.println("Correcto ");
                 b = true;
-                this.telf = telf;
+                this.telf = telfono;
 
             } else {
                 System.out.println("El telefono introducido es incorrecto");
@@ -184,7 +184,7 @@ class Direccion {
 
                 a = true;
 
-                this.email = email;
+               
 
             } else {
                 System.out.println("Correo electronico incorrecto");
@@ -199,7 +199,7 @@ class Direccion {
             if (telf.length() == 9) {
                 System.out.println("Correcto ");
                 b = true;
-                this.telf = telf;
+               
 
             } else {
                 System.out.println("El telefono introducido es incorrecto");
